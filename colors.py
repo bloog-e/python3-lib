@@ -56,13 +56,13 @@ BLINK="\033[5m"
 NEGATIVE="\033[7m"
 CROSSED="\033[9m"
 def color_test(message='colors test !'):
-    for i in dir(bases.colors):
+    for i in dir(colors):
         if not i.startswith('__'):
             if i not in ["color_test","put","parse_color","bases","colors_names","l","all_colors"]:
-                print(getattr(bases.colors,i)+message+'\033[0m')
+                print(getattr(colors,i)+message+'\033[0m')
 def colors_names():
     l=[]
-    for i in dir(bases.colors):
+    for i in dir(colors):
         if not i.startswith('__'):
             if i not in ["color_test","put","parse_color","bases","colors_names","l","all_colors"]:
                 l.append(i)
@@ -70,10 +70,10 @@ def colors_names():
     return l
 def all_colors():
     l=[]
-    for i in dir(bases.colors):
+    for i in dir(colors):
         if not i.startswith('__'):
             if i not in ["color_test","put","parse_color","bases","colors_names","l","all_colors"]:
-                l.append(getattr(bases.colors,i))
+                l.append(getattr(colors,i))
     
     return l
 
@@ -81,4 +81,4 @@ def put(color=fgBlack, text="hello"):
     return color+text+reset
 def parse_color(color_str):
     """parse a color name in a string to the real color"""
-    return getattr(bases.colors,color_str)
+    return getattr(colors,color_str)
