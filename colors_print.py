@@ -1,4 +1,4 @@
-import colors
+import colors_print as colors
 reset = "\033[0m"
 # Black
 fgBlack = "\033[30m"
