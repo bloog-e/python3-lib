@@ -1,6 +1,6 @@
 from tkinter import *
 def askokcancel(title='',prompt='',btn=None,btn_info='',timeout=None):
-    """ option : title ,prompt are a string, btn is the sowed text of the info button,
+    """ option : title ,prompt is a string, btn is the sowed text of the info button,
 btn_info is the info and timeout is the timeout
 this fonction is usefull to ask ok or cancel with more info"""
     root=Tk()
